@@ -1,6 +1,4 @@
 #list {
-  display: flex;
-  flex-wrap: wrap;
 }
 #list li {
   cursor: pointer;
@@ -10,12 +8,9 @@
 
 #description {
   display: none;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  background-color: white;
 }
 
 #description.show {
   display: block;
+  position: fixed;
 }

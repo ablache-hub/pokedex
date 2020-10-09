@@ -65,20 +65,12 @@ function fillList(json) {
 function showDescription(data) {
   description.classList.add("show");
 
-  var nom = document.querySelector(".name");
-  nom.innerHTML = data.name;
-  var id = document.querySelector(".id");
-  id.innerHTML = data.id;
-  var poids = document.querySelector(".weight");
-  poids.innerHTML = data.weight;
-  var taille = document.querySelector(".height");
-  taille.innerHTML = data.height;
-
-  //   const fields = description.querySelectorAll("dd");
-  //   fields.forEach((dd) => {
-  // ...
-
-  //   });
+  const fields = description.querySelectorAll("dd");
+  fields.forEach((dd) => {
+    // ...
+    var nom = document.getElementById("#nom");
+    nom.innerHTML = data.name;
+  });
 }
 
 /**

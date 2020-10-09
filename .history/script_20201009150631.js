@@ -65,20 +65,12 @@ function fillList(json) {
 function showDescription(data) {
   description.classList.add("show");
 
-  var nom = document.querySelector(".name");
-  nom.innerHTML = data.name;
-  var id = document.querySelector(".id");
-  id.innerHTML = data.id;
-  var poids = document.querySelector(".weight");
-  poids.innerHTML = data.weight;
-  var taille = document.querySelector(".height");
-  taille.innerHTML = data.height;
-
-  //   const fields = description.querySelectorAll("dd");
-  //   fields.forEach((dd) => {
-  // ...
-
-  //   });
+  const fields = description.querySelectorAll("dd");
+  fields.forEach((dd) => {
+    // ...
+    var nom = document.querySelector(#nom);
+    console.log(nom);
+  });
 }
 
 /**
@@ -90,6 +82,7 @@ function hideDescription() {
 
 // Fetch the API end-point and fill the list
 fetch(api).then(transformToJson).then(fillList);
+
 
 // var classe = dd.classList[0];
 
@@ -104,8 +97,10 @@ fetch(api).then(transformToJson).then(fillList);
 // //Comme datatype est un objet on ne peut pas faire pareil, cela engendrerait une erreur, la méthode est donc differente
 //     dd.innertext = "";
 
+
 //     //on itere data.types pour tous les afficher cote à cote
 //     data.types.forEach((type) => {
 //         if(dd.innertext.length != 0) dd.innertext += ", ";
 //         dd.innerText += type.type.name;
 //     });
+}

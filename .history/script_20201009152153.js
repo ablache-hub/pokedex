@@ -67,12 +67,7 @@ function showDescription(data) {
 
   var nom = document.querySelector(".name");
   nom.innerHTML = data.name;
-  var id = document.querySelector(".id");
-  id.innerHTML = data.id;
-  var poids = document.querySelector(".weight");
-  poids.innerHTML = data.weight;
-  var taille = document.querySelector(".height");
-  taille.innerHTML = data.height;
+
 
   //   const fields = description.querySelectorAll("dd");
   //   fields.forEach((dd) => {

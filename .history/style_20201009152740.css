@@ -10,12 +10,12 @@
 
 #description {
   display: none;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  background-color: white;
 }
 
 #description.show {
   display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: white;
 }

@@ -17,5 +17,6 @@
 }
 
 #description.show {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 }
