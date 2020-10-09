@@ -40,9 +40,6 @@ function createItem (pokemon) {
         item.appendChild(id);
         id.innerHTML = data.id;
 
-        item.appendChild(img);
-        img
-
         console.log(data);
     });
 }

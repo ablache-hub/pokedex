@@ -27,23 +27,15 @@ function emptyList () {
 function createItem (pokemon) {
     // Create a li tag
     const item = document.createElement("li");
-    const id = document.createElement("div");
-    const img = document.createElement("img");
     // ...
     
     
     fetch(pokemon.url).then(transformToJson).then((data) => {
       
         list.appendChild(item);
-        item.innerHTML = data.name;
-
-        item.appendChild(id);
-        id.innerHTML = data.id;
-
-        item.appendChild(img);
-        img
-
-        console.log(data);
+        item.innerHTML = "test";
+        console.log(data.name);
+    
     });
 }
 
