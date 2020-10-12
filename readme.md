@@ -1,5 +1,4 @@
 # Pokedex
-----
 
 ## JavaScript
 
