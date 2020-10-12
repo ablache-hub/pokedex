@@ -25,16 +25,15 @@ function emptyList() {
  * Create an item, fetch its data and setup event listener
  */
 function createItem(pokemon) {
-  // Création des balises
+  // Create a li tag
   const li = document.createElement("li");
   const id = document.createElement("div");
   const img = document.createElement("img");
+  // ...
 
   fetch(pokemon.url)
     .then(transformToJson)
     .then((data) => {
-      // Affichage de la liste contenant le nom+l'image
-      // sur la page principale
       list.appendChild(li);
       li.innerHTML = data.name;
 
@@ -44,7 +43,6 @@ function createItem(pokemon) {
       id.appendChild(img);
       img.src = data.sprites.front_default;
 
-      //Au click sur "li", appeller showDescription()
       li.addEventListener("click", function () {
         showDescription(data);
       });
@@ -67,7 +65,6 @@ function fillList(json) {
 function showDescription(data) {
   description.classList.add("show");
 
-  //Affichage des éléments dans la description
   var nom = document.querySelector(".name");
   nom.innerHTML = data.name;
   var id = document.querySelector(".id");
@@ -80,9 +77,9 @@ function showDescription(data) {
 
   types.innerText = "";
 
-  //Si "types" contient plusieurs valeurs alors les afficher separement
+  //on itere data.types pour tous les afficher cote à cote
   data.types.forEach((type) => {
-    if (types.innerText.length != 0) types.innerText += "/";
+    if (types.innerText.length != 0) types.innerText += "";
     types.innerText += type.type.name;
   });
 

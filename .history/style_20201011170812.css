@@ -10,34 +10,21 @@
 
 body {
   font-family: "pokemon_classicregular";
-  font-size: 0.9em;
-  margin: auto;
-  max-width: 1200px;
-}
-
-.logo {
-  position: relative;
-  top: -20px;
-  left: 30px;
-  margin-bottom: -45px;
 }
 
 #list {
   display: flex;
   flex-wrap: wrap;
 }
-
 #list li {
   cursor: pointer;
-  color: white;
   list-style: none;
   text-transform: capitalize;
   text-align: center;
-  background-image: linear-gradient(#555, white, #555);
+  background-image: linear-gradient(grey, white, grey);
   margin: 10px 10px 10px 10px;
   height: 130px;
   width: 170px;
-  border-radius: 30px;
 }
 #list li:hover {
 }
@@ -47,36 +34,17 @@ body {
   position: fixed;
   top: 50px;
   left: 50px;
-  width: 300px;
-  color: white;
-  background-color: red;
-  border-radius: 30px;
+  width: 200px;
+  background-image: linear-gradient(white, grey);
 }
 
-.close {
-  position: relative;
-  top: 5px;
-  left: 250px;
-}
 #description.show {
   display: block;
 }
 
-li,
-#description {
-  border: 5px outset red;
-}
-
-dt {
-  margin-left: 10px;
-  font-weight: bolder;
-}
-
 dd {
-  text-transform: capitalize;
   position: relative;
-  left: 70px;
+  left: 60px;
   top: -26px;
-  font-style: italic;
   /* background-image: linear-gradient(white, grey); */
 }

@@ -1,0 +1,28 @@
+#list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#list li {
+  cursor: pointer;
+  list-style: none;
+  text-transform: capitalize;
+}
+#list li:hover {
+}
+
+#description {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  background-color: white;
+}
+
+#description.show {
+  display: block;
+}
+
+dd {
+  margin-left: 50px;
+  margin-top: 0px;
+}

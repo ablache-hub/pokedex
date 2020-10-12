@@ -12,14 +12,12 @@ body {
   font-family: "pokemon_classicregular";
   font-size: 0.9em;
   margin: auto;
-  max-width: 1200px;
+  max-width: 768px;
 }
 
-.logo {
-  position: relative;
-  top: -20px;
-  left: 30px;
-  margin-bottom: -45px;
+#logo {
+  padding-bottom: -35px;
+  text-align: center;
 }
 
 #list {
@@ -53,11 +51,6 @@ body {
   border-radius: 30px;
 }
 
-.close {
-  position: relative;
-  top: 5px;
-  left: 250px;
-}
 #description.show {
   display: block;
 }
