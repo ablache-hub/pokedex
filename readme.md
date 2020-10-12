@@ -23,4 +23,4 @@
 
 Avant tout sur le Javascript, au dépard je ne comprenais pas trop quoi faire et comment, mais à force d'échange et d'explications avec les collègues plus experimentés je suis parvenu à mieux comprendre les grandes lignes et produire quelque chose qui tient la route.
 
-Pour l'instant, je préfère utiliser une programmation "naive" car plus facile à appréhender (par exemple faire un querySelector dans une variable pour chaque élémpent)
+Pour l'instant, je préfère utiliser une programmation "naive" car plus facile à appréhender (par exemple faire un querySelector dans une variable pour chaque élément)
