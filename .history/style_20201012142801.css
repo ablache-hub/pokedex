@@ -1,11 +1,8 @@
 @font-face {
   font-family: "pokemon_classicregular";
-  src: url("https://github.com/ablache-hub/pokedex/raw/main/police/pokemon_classic-webfont.woff2")
-      format("woff2"),
-    url("https://github.com/ablache-hub/pokedex/raw/main/police/pokemon_classic-webfont.woff")
-      format("woff"),
-    url("https://github.com/ablache-hub/pokedex/raw/main/police/Pokemon_Classic.ttf")
-      format("truetype");
+  src: url("../police/pokemon_classic-webfont.woff2") format("woff2"),
+    url("../police/pokemon_classic-webfont.woff") format("woff"),
+    url("../police/pokemon_Classic.ttf") format("truetype");
 
   font-weight: normal;
   font-style: normal;
@@ -43,7 +40,6 @@ body {
   width: 170px;
   border-radius: 30px;
 }
-
 #list li:hover {
   transform: scale(1.2);
 }
