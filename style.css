@@ -83,3 +83,8 @@ dd {
   font-style: italic;
   /* background-image: linear-gradient(white, grey); */
 }
+
+.image img {
+  height: 200px;
+  margin-left: -60px;
+}

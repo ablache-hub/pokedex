@@ -1,7 +1,7 @@
 const list = document.getElementById("list");
 const description = document.getElementById("description");
 
-const api = "https://pokeapi.co/api/v2/pokemon?limit=120";
+const api = "https://pokeapi.co/api/v2/pokemon?limit=12";
 
 /**
  * Try to parse a response as JSON data
@@ -28,7 +28,7 @@ function createItem(pokemon) {
   // Création des balises
   const li = document.createElement("li");
   const id = document.createElement("div");
-  const img = document.createElement("img");
+  const image = document.createElement("img");
 
   fetch(pokemon.url)
     .then(transformToJson)
@@ -41,8 +41,8 @@ function createItem(pokemon) {
       li.appendChild(id);
       //id.innerHTML = data.id;
 
-      id.appendChild(img);
-      img.src = data.sprites.front_default;
+      id.appendChild(image);
+      image.src = data.sprites.front_default;
 
       //Au click sur "li", appeller showDescription()
       li.addEventListener("click", function () {
@@ -66,8 +66,14 @@ function fillList(json) {
  */
 function showDescription(data) {
   description.classList.add("show");
-
   //Affichage des éléments dans la description
+
+  const image = document.createElement("img"); //Balise img
+  image.src = data.sprites.other["official-artwork"].front_default; //Attribution "src" à <img>
+  document.querySelector("dd.image").innerHTML = ""; //Clean du contenu de dd.image
+  document.querySelector("dd.image").appendChild(image); //Injection de <img> avec le src de l'image
+
+  //Selection de chaque classe/injection des données
   var nom = document.querySelector(".name");
   nom.innerHTML = data.name;
   var id = document.querySelector(".id");
@@ -80,7 +86,7 @@ function showDescription(data) {
 
   types.innerText = "";
 
-  //Si "types" contient plusieurs valeurs alors les afficher separement
+  //Si "types" contient plusieurs valeurs alors les afficher séparement
   data.types.forEach((type) => {
     if (types.innerText.length != 0) types.innerText += "/";
     types.innerText += type.type.name;
@@ -102,22 +108,3 @@ function hideDescription() {
 
 // Fetch the API end-point and fill the list
 fetch(api).then(transformToJson).then(fillList);
-
-// var classe = dd.classList[0];
-
-// //si sa classe #1 n'est pas "types"
-
-// if(classe!="type") {
-
-//     //on definit son texte comme la valeur correspondant à la propriété dans "data" du même nom que la classe
-//     dd.innertext = data[classe];
-
-// } else {
-// //Comme datatype est un objet on ne peut pas faire pareil, cela engendrerait une erreur, la méthode est donc differente
-// dd.innertext = "";
-
-// //on itere data.types pour tous les afficher cote à cote
-// data.types.forEach((type) => {
-//     if(dd.innertext.length != 0) dd.innertext += ", ";
-//     dd.innerText += type.type.name;
-// });
